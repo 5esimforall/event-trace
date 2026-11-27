@@ -1,0 +1,25 @@
+{
+  "id": "event-trace",
+  "title": "Event Trace · 事件追踪",
+  "description": "Read-only runtime event ledger for Foundry VTT V13: field-level document diffs, action grouping, notification history, silent hook interceptions, local error attribution, and JSON snapshot export.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13.351",
+    "maximum": "13"
+  },
+  "authors": [
+    {
+      "name": "Event Trace Contributors"
+    }
+  ],
+  "esmodules": ["scripts/main.mjs"],
+  "styles": ["styles/event-trace.css"],
+  "languages": [
+    {"lang": "en", "name": "English", "path": "lang/en.json"},
+    {"lang": "cn", "name": "简体中文", "path": "lang/cn.json"},
+    {"lang": "zh", "name": "中文", "path": "lang/cn.json"},
+    {"lang": "zh-CN", "name": "简体中文（zh-CN）", "path": "lang/cn.json"},
+    {"lang": "zh-Hans", "name": "简体中文（zh-Hans）", "path": "lang/cn.json"}
+  ]
+}

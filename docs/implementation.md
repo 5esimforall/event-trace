@@ -32,8 +32,9 @@ Event Trace 只做只读事件观测。以下 13.351 源码事实决定了“注
 
 ```
 projects/event-trace/
-  AGENTS.md  DESIGN.md  README.md  package.json
+  AGENTS.md  DESIGN.md  README.md  package.json  tsconfig.json
   docs/implementation.md
+  types/api.d.ts         公开 API、Target Ref 与快照外框类型声明
   module/
     module.json  README.md
     scripts/
@@ -257,7 +258,7 @@ projects/event-trace/
 
 ## 9. 测试要求
 
-使用 `node --test` 与 `jsdom`，并沿用 `chat-lens` 的 `tools/check-lang.mjs` 与 `tools/check-syntax.mjs`：
+使用 `node --test` 与 `jsdom`，并沿用 `chat-lens` 的 `tools/check-lang.mjs` 与 `tools/check-syntax.mjs`，同时在 `npm run check` 中运行 `tsc --noEmit` 检查 `types/` 与核心 `.mjs` 模块：
 
 - **纯逻辑测试（`diff.test.mjs`、`attribution.test.mjs`、`trace.test.mjs`）**：
   - `diff`：嵌套属性展平、`-=` 与 `==` 特殊键解析、`before`/`after` 缺失回退、`_stats` 过滤、`_movementHistory` 摘要、超长文本截断、Data URI 脱敏与最大字段数截断。

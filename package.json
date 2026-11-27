@@ -1,0 +1,12 @@
+{
+  "name": "event-trace",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
